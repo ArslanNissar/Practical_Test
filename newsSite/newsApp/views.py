@@ -7,16 +7,16 @@ from django.template import loader
 
 def index(request):
 
-    latest_news = Story.objects.order_by('-pub_date')[:5]
+    #latest_news = Story.objects.order_by('-pub_date')[:5]
 
-    template = loader.get_template('newsApp/index.html')
+    #template = loader.get_template('newsApp/index.html')
 
-    context = {
-            'latest_news': latest_news,
-    }
+    #context = {
+    #        'latest_news': latest_news,
+    #}
 
-    return render(request, 'newsApp/Index.html', context)
-    #return HttpResponse("News")
+    #return render(request, 'newsApp/Index.html', context)
+    return HttpResponse("News")
 
 
 
